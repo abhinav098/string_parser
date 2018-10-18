@@ -1,0 +1,24 @@
+<%= render 'form' %>
+<% @parses.each do |parse|%>
+  <%= link_to truncate(parse.text, length: 20), parse_path(parse)%>
+  <p><%= "C= #{parse.count_c}" unless parse.count_c.zero? %></p>
+  <p><%= "Java= #{parse.count_java}"  unless parse.count_java.zero?  %></p>
+  <p><%= "C# = #{parse.count_c_sharp}" unless parse.count_c_sharp.zero?  %></p>
+  <p><%= "C++ = #{parse.count_c_plus_plus}" unless parse.count_c_plus_plus.zero?  %></p>
+  <p><%= "VB = #{parse.count_vb}" unless parse.count_vb.zero?  %></p>
+  <p><%= "Ruby = #{parse.count_ruby}" unless parse.count_ruby.zero?  %></p>
+  <p><%= "Rails = #{parse.count_rails}" unless parse.count_rails.zero?  %></p>
+  <p><%= "Physics = #{parse.count_physics}" unless parse.count_physics.zero?  %></p>
+  <p><%= "Chemistry = #{parse.count_chemistry}" unless parse.count_chemistry.zero?  %></p>
+  <p><%= "Mathematics = #{parse.count_mathematics}" unless parse.count_mathematics.zero?  %></p>
+  <p><%= "Social Science = #{parse.count_social_science}" unless parse.count_social_science.zero?  %></p>
+  <p><%= "Science = #{parse.count_science}" unless parse.count_science.zero?  %></p>
+  <p><%= "History = #{parse.count_history}" unless parse.count_history.zero?  %></p>
+  <p><%= "Geography = #{parse.count_geography}" unless parse.count_geography.zero? %></p>
+  <p><%= "Bus = #{parse.count_bus}" unless parse.count_bus.zero? %></p>
+  <p><%= "Train = #{parse.count_train}" unless parse.count_train.zero? %></p>
+  <p><%= "Rickshaw = #{parse.count_rickshaw}" unless parse.count_rickshaw.zero? %></p>
+  <p><%= "Bike = #{parse.count_bike}" unless parse.count_bike.zero?%></p>
+  <p><%= "Car = #{parse.count_car}" unless parse.count_car.zero?%></p>
+  <hr>
+<% end %>
